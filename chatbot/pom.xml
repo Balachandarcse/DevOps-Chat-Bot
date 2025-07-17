@@ -19,7 +19,7 @@
     <description>Chatbot Spring Boot Application</description>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version> <!-- ⚠️ Use Java 17 for Jenkins compatibility -->
     </properties>
 
     <dependencies>
@@ -29,7 +29,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- SOAP -->
+        <!-- SOAP Support -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
@@ -64,10 +64,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <release>21</release>
+                    <release>17</release> <!-- Match with JAVA version installed in Jenkins -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
